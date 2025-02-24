@@ -9,11 +9,13 @@ public class Movement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float finalSpeed;
     private Rigidbody2D rb2d;
+    private Vector2 lastDirection;
     List<Buff> buffs = new List<Buff>();
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        lastDirection = new Vector2();
     }
 
     private void Start()
@@ -40,14 +42,21 @@ public class Movement : MonoBehaviour
 
     public void SetDirection(CallbackContext ctx)
     {
-        if (ctx.phase == InputActionPhase.Performed 
-            || ctx.phase == InputActionPhase.Canceled)
+        if (ctx.phase == InputActionPhase.Performed || ctx.phase == InputActionPhase.Canceled)
         {
             Vector2 direction = ctx.ReadValue<Vector2>();
-            //print($"Set Direction: {direction}");
+
+            if (ctx.phase == InputActionPhase.Performed)
+            {
+                lastDirection = direction;
+            }
+
             SetDirection(direction);
         }
+
     }
+
+    public Vector2 GetLastDirection() => lastDirection;
 }
 
 public class Buff
