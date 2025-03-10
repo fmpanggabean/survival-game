@@ -2,14 +2,8 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    [Tooltip("The projectile prefab to be instantiated when shooting.")]
-    public GameObject projectilePrefab;
-
-    [Tooltip("The point from which projectiles are fired.")]
-    public Transform firePoint;
-
-    [Tooltip("The speed at which the projectile travels.")]
-    public float projectileSpeed = 10f;
+    [Tooltip("The weapon used by the player.")]
+    public Weapon weapon;
 
     [Tooltip("The rate at which the player can fire projectiles, in seconds.")]
     public float fireRate = 0.2f;
@@ -19,7 +13,7 @@ public class PlayerShooting : MonoBehaviour
     void Update()
     {
         RotateTowardsCursor();
-        Shoot();
+        HandleShooting();
     }
 
     void RotateTowardsCursor()
@@ -31,18 +25,12 @@ public class PlayerShooting : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
-    void Shoot()
+    void HandleShooting()
     {
         if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
             nextFireTime = Time.time + fireRate;
-            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-            if (rb != null)
-            {
-                rb.velocity = firePoint.right * projectileSpeed;
-            }
+            weapon.Shoot();
         }
     }
-}
 }
