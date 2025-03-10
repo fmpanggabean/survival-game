@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
@@ -30,7 +31,16 @@ public class Weapon : MonoBehaviour
     public void Shoot()
     {
         Bullet b = pool.Request<Bullet>();
+        if (b == null) return;
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        mousePos.z = 0f;
+
+        Vector2 direction = (mousePos - transform.position).normalized;
+
+
         b.SetPosition(transform.position);
-        b.SetRotation(transform.rotation);
+
+        b.SetDirection(direction);
     }
 }
