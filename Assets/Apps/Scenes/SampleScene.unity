@@ -10285,7 +10285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 870b06275aa6996479cab9bb669cc4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDelay: 1
+  attackDelay: 0.2
 --- !u!1001 &1688438606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10296,6 +10296,18 @@ PrefabInstance:
     - target: {fileID: 9090490486106096641, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096641, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Keyboard & Mouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9090490486106096668, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
       propertyPath: m_RootOrder
