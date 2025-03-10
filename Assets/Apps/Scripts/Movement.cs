@@ -12,6 +12,9 @@ public class Movement : MonoBehaviour
     private Vector2 lastDirection;
     List<Buff> buffs = new List<Buff>();
 
+    [SerializeField] private GameObject bulletPrefab; // Assign your bullet prefab in the Inspector
+    [SerializeField] private Transform firePoint; // Point from where the bullet is fired
+
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -33,7 +36,7 @@ public class Movement : MonoBehaviour
     private float GetAllBuffModifier()
     {
         float modifier = 1;
-        foreach(Buff b in buffs)
+        foreach (Buff b in buffs)
         {
             modifier *= b.modifier;
         }
@@ -53,10 +56,32 @@ public class Movement : MonoBehaviour
 
             SetDirection(direction);
         }
-
     }
 
     public Vector2 GetLastDirection() => lastDirection;
+
+    // Handle shooting input
+    public void OnShoot(InputAction.CallbackContext ctx)
+    {
+        if (ctx.phase == InputActionPhase.Performed)
+        {
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        // Get the mouse position in world coordinates
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        // Calculate the direction from the player to the mouse position
+        Vector2 direction = (mousePosition - (Vector2)firePoint.position).normalized;
+
+        // Activate a bullet from the object pool
+        GameObject bullet = ObjectPool.Instance.GetObject();
+        bullet.transform.position = firePoint.position;
+        bullet.GetComponent<Bullet>().SetDirection(direction);
+    }
 }
 
 public class Buff
