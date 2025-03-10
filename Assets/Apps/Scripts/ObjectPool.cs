@@ -12,6 +12,7 @@ public class ObjectPool : MonoBehaviour
 
     void Awake()
     {
+        generatedObjects = new List<GameObject>();
         GeneratePooledObject();
         DeactivateAllObjects();
     }
@@ -31,7 +32,9 @@ public class ObjectPool : MonoBehaviour
 
         for (int i = 0; i < count; i++)
         {
-            generatedObjects.Add(Instantiate(bulletPrefab, transform));
+            GameObject bullet = Instantiate(bulletPrefab, transform);
+            bullet.SetActive(false);
+            generatedObjects.Add(bullet);
         }
 
         //for (int j = 0; j < enemies.Length; j++)
@@ -48,7 +51,7 @@ public class ObjectPool : MonoBehaviour
     {
         foreach (GameObject obj in generatedObjects)
         {
-            IPoolObject pooledObject = obj.GetComponent<T>();
+            T pooledObject = obj.GetComponent<T>();
 
             if (pooledObject == null) continue;
 
