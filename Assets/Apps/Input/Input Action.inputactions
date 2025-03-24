@@ -11,7 +11,8 @@
                     "id": "2a157347-31a4-4ccd-87d3-42285b9dc42c",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Skill",
@@ -19,7 +20,8 @@
                     "id": "785f2105-6a62-4230-a99c-0cefb7f6c16c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Pause",
@@ -27,7 +29,8 @@
                     "id": "e396967f-23c5-470f-837a-30f8d9dc0382",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -120,7 +123,17 @@
                     "id": "a508d531-7682-470e-b394-fb421f1e869d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Next Dialog",
+                    "type": "Button",
+                    "id": "4174ff67-ccb3-49a1-a0c6-7efd9f47e8a9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -132,6 +145,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f6cbe5e8-8e33-4626-a448-ec86c3821e9d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Next Dialog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
