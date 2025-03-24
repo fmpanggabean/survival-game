@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,6 +12,13 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb2d;
     private Vector2 lastDirection;
     List<Buff> buffs = new List<Buff>();
+
+    public float dashSpeed = 15f;
+    public float dashTime = 0.2f;
+    public float dashCooldown = 1f;
+    public bool moveDash = false;
+    private bool isDashing = false;
+    private bool canDash = true;
 
     private void Awake()
     {
@@ -49,6 +57,14 @@ public class Movement : MonoBehaviour
             if (ctx.phase == InputActionPhase.Performed)
             {
                 lastDirection = direction;
+
+                canDash = true;
+                moveDash = true;
+            }
+            else if(ctx.phase == InputActionPhase.Canceled)
+            {
+                canDash = false;
+                moveDash = false;
             }
 
             SetDirection(direction);
@@ -57,6 +73,36 @@ public class Movement : MonoBehaviour
     }
 
     public Vector2 GetLastDirection() => lastDirection;
+
+    public void OnDash(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started && canDash)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
+    private IEnumerator Dash()
+    {
+        isDashing = true;
+        canDash = false;
+
+        rb2d.velocity = lastDirection * dashSpeed;
+
+        yield return new WaitForSeconds(dashTime);
+        if (moveDash == true)
+        {
+            rb2d.velocity = lastDirection * finalSpeed;
+        }
+        else if (moveDash == false)
+        {
+            rb2d.velocity = lastDirection * 0f;
+        }
+
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
+    }
 }
 
 public class Buff

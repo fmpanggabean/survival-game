@@ -191,6 +191,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a508d531-7682-470e-b394-fb421f1e869d
     m_ActionName: Menu/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9090490486106096669}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e4988aa2-7e93-4274-991c-f818f3140f2c
+    m_ActionName: Gameplay/Dash[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -210,6 +226,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   finalSpeed: 0
+  dashSpeed: 15
+  dashTime: 0.2
+  dashCooldown: 1
+  moveDash: 0
 --- !u!114 &5203963428670725589
 MonoBehaviour:
   m_ObjectHideFlags: 0
