@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour, IPoolObject
 {
+    [SerializeField] private float speed;
 
     void Update()
     {
-        
+        transform.position += Vector3.right  * Time.deltaTime * speed;
     }
     public void Activate()
     {
