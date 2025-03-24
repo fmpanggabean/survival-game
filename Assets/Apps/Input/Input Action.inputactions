@@ -11,7 +11,8 @@
                     "id": "2a157347-31a4-4ccd-87d3-42285b9dc42c",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Skill",
@@ -19,7 +20,8 @@
                     "id": "785f2105-6a62-4230-a99c-0cefb7f6c16c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Pause",
@@ -27,7 +29,17 @@
                     "id": "e396967f-23c5-470f-837a-30f8d9dc0382",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShootDirection",
+                    "type": "Value",
+                    "id": "29bdc402-c536-422d-bc5b-6c53fffdbf24",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -107,6 +119,17 @@
                     "action": "Skill",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9760f7cb-0236-4c41-91b5-927204cb0e8e",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootDirection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -120,7 +143,8 @@
                     "id": "a508d531-7682-470e-b394-fb421f1e869d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
