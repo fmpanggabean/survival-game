@@ -34,3 +34,4 @@ public class Weapon : MonoBehaviour
         b.SetRotation(transform.rotation);
     }
 }
+    
