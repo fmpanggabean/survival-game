@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour, IPoolObject
 
     void Update()
     {
-        transform.position += Vector3.right  * Time.deltaTime * speed;
+        transform.position += transform.right  * Time.deltaTime * speed;
     }
     public void Activate()
     {
