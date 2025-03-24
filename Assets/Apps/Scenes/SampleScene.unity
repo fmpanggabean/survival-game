@@ -681,6 +681,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4263077683021586206, guid: 2ab2671e477f00947b874fabc62fa9f1, type: 3}
   m_PrefabInstance: {fileID: 302866750}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &306778715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306778717}
+  - component: {fileID: 306778716}
+  m_Layer: 0
+  m_Name: Explode Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &306778716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306778715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1342fddd59074f945bf10686f283b7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 4152958625213232127, guid: 22bb1360acfab1b47a7fcbf928b31c18, type: 3}
+  initialSpawnRate: 1
+  minSpawnRate: 1
+  spawnRateDecrease: 0.01
+  widthOffset: 10
+  initialBulletsPerSpawn: 2
+  maxBulletsPerSpawn: 4
+  bulletsIncreaseInterval: 1
+--- !u!4 &306778717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306778715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.01, y: 3.31, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &314725406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4083,7 +4134,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7880caba4311ab44fab57159dc51bc49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9621,7 +9672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1119517156
 MonoBehaviour:
@@ -9930,7 +9981,7 @@ Transform:
   - {fileID: 476289940}
   - {fileID: 1038416583}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1326678252
 PrefabInstance:
@@ -10297,49 +10348,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
-      value: 16c181f5-2858-4e54-a529-96421d321e8b
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
-      value: Gameplay/PointGunAt[/Mouse/position]
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1532038634}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Rotate
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Weapon, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 9090490486106096668, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9090490486106096668, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
       propertyPath: m_LocalPosition.x
