@@ -7,6 +7,7 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject enemiesPrefab;
     [SerializeField] private int count;
     [SerializeField] private List<GameObject> generatedObjects;
 
@@ -32,15 +33,8 @@ public class ObjectPool : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             generatedObjects.Add(Instantiate(bulletPrefab, transform));
-        }
-
-        //for (int j = 0; j < enemies.Length; j++)
-        //{
-        //    for (int i = 0; i < count; i++)
-        //    {
-        //        generatedObjects.Add(Instantiate(enemies[j], transform));
-        //    }
-        //}        
+            generatedObjects.Add(Instantiate(enemiesPrefab, transform));
+        }       
     }
 
 

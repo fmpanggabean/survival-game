@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour, IPoolObject
 {
-
+    [SerializeField] private float _speed = 5f;
     void Update()
     {
-        
+        transform.position += transform.right * _speed * Time.deltaTime;
     }
     public void Activate()
     {
@@ -29,4 +29,17 @@ public class Bullet : MonoBehaviour, IPoolObject
     {
         transform.rotation = rotation;
     }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("It Wok");
+        if (!other.CompareTag("Player"))
+        {
+            IDamageable Enemies = other.GetComponent<IDamageable>();
+            if(Enemies != null)
+                Enemies.Damaged();
+            Deactivate();
+        }
+    }
+
 }
