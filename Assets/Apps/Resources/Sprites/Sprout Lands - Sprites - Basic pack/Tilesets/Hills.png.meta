@@ -227,7 +227,11 @@ TextureImporter:
   streamingMipmapsPriority: 0
   vTOnly: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   ignoreMasterTextureLimit: 0
+=======
+  ignoreMipmapLimit: 0
+>>>>>>> Stashed changes
 =======
   ignoreMipmapLimit: 0
 >>>>>>> Stashed changes
@@ -270,6 +274,10 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  swizzle: 50462976
+>>>>>>> Stashed changes
 =======
   swizzle: 50462976
 >>>>>>> Stashed changes
@@ -1816,7 +1824,11 @@ TextureImporter:
       Hills_8: 3146981904170730527
       Hills_9: -7574638251330772885
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   spritePackingTag: 
+=======
+  mipmapLimitGroupName: 
+>>>>>>> Stashed changes
 =======
   mipmapLimitGroupName: 
 >>>>>>> Stashed changes

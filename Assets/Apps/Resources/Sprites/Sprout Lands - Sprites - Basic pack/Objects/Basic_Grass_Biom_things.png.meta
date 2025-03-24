@@ -131,7 +131,11 @@ TextureImporter:
   streamingMipmapsPriority: 0
   vTOnly: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   ignoreMasterTextureLimit: 0
+=======
+  ignoreMipmapLimit: 0
+>>>>>>> Stashed changes
 =======
   ignoreMipmapLimit: 0
 >>>>>>> Stashed changes
@@ -174,6 +178,10 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  swizzle: 50462976
+>>>>>>> Stashed changes
 =======
   swizzle: 50462976
 >>>>>>> Stashed changes
@@ -1016,7 +1024,11 @@ TextureImporter:
       Basic_Grass_Biom_things_8: 8507885531282197233
       Basic_Grass_Biom_things_9: 1833829121678256577
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   spritePackingTag: 
+=======
+  mipmapLimitGroupName: 
+>>>>>>> Stashed changes
 =======
   mipmapLimitGroupName: 
 >>>>>>> Stashed changes

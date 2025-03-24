@@ -8,9 +8,12 @@
     },
     "com.unity.2d.animation": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "version": "7.1.1",
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
       "version": "6.0.3",
 >>>>>>> Stashed changes
       "depth": 0,
@@ -30,6 +33,9 @@
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.collections": "1.1.0",
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.uielements": "1.0.0"
@@ -38,9 +44,12 @@
     },
     "com.unity.2d.common": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "version": "6.0.7",
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
       "version": "5.0.0",
 >>>>>>> Stashed changes
       "depth": 1,
@@ -49,8 +58,11 @@
         "com.unity.burst": "1.5.1",
         "com.unity.2d.sprite": "1.0.0",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "com.unity.mathematics": "1.1.0",
 =======
+=======
+>>>>>>> Stashed changes
 =======
       "version": "8.0.1",
       "depth": 1,
@@ -61,6 +73,9 @@
         "com.unity.mathematics": "1.1.0",
         "com.unity.modules.animation": "1.0.0",
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         "com.unity.modules.uielements": "1.0.0"
       },
@@ -85,9 +100,12 @@
     },
     "com.unity.2d.psdimporter": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "version": "6.0.9",
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
       "version": "5.0.3",
 >>>>>>> Stashed changes
       "depth": 0,
@@ -108,6 +126,9 @@
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.2d.animation": "9.0.1"
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       },
       "url": "https://packages.unity.com"
@@ -120,6 +141,7 @@
     },
     "com.unity.2d.spriteshape": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "version": "7.0.7",
       "depth": 0,
       "source": "registry",
@@ -128,6 +150,8 @@
         "com.unity.2d.common": "6.0.6",
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
       "version": "6.0.0",
       "depth": 0,
       "source": "registry",
@@ -141,6 +165,9 @@
       "dependencies": {
         "com.unity.2d.common": "8.0.1",
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         "com.unity.mathematics": "1.1.0",
         "com.unity.modules.physics2d": "1.0.0"
@@ -158,13 +185,19 @@
     },
     "com.unity.2d.tilemap.extras": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "version": "2.2.7",
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
       "version": "2.0.0",
 =======
       "version": "3.1.1",
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       "depth": 0,
       "source": "registry",
@@ -172,8 +205,13 @@
         "com.unity.ugui": "1.0.0",
         "com.unity.2d.tilemap": "1.0.0",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
+        "com.unity.modules.tilemap": "1.0.0"
+=======
+>>>>>>> Stashed changes
+=======
         "com.unity.modules.tilemap": "1.0.0"
 =======
 >>>>>>> Stashed changes
@@ -183,6 +221,7 @@
       "url": "https://packages.unity.com"
     },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "com.unity.burst": {
       "version": "1.8.18",
       "depth": 2,
@@ -191,6 +230,8 @@
         "com.unity.mathematics": "1.2.1",
         "com.unity.modules.jsonserialize": "1.0.0"
 =======
+=======
+>>>>>>> Stashed changes
     "com.unity.ai.navigation": {
       "version": "1.1.4",
       "depth": 0,
@@ -207,6 +248,9 @@
       "dependencies": {
         "com.unity.mathematics": "1.2.1"
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       },
       "url": "https://packages.unity.com"
@@ -216,6 +260,16 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.collections": {
+      "version": "1.2.4",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.burst": "1.6.6",
+        "com.unity.test-framework": "1.1.31"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.collections": {
@@ -298,13 +352,19 @@
     },
     "com.unity.timeline": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "version": "1.6.5",
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
       "version": "1.5.5",
 =======
       "version": "1.7.5",
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       "depth": 0,
       "source": "registry",

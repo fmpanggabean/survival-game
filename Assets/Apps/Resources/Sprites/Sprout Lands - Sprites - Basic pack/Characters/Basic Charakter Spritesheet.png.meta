@@ -74,7 +74,11 @@ TextureImporter:
   streamingMipmapsPriority: 0
   vTOnly: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   ignoreMasterTextureLimit: 0
+=======
+  ignoreMipmapLimit: 0
+>>>>>>> Stashed changes
 =======
   ignoreMipmapLimit: 0
 >>>>>>> Stashed changes
@@ -117,6 +121,10 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  swizzle: 50462976
+>>>>>>> Stashed changes
 =======
   swizzle: 50462976
 >>>>>>> Stashed changes
@@ -541,7 +549,11 @@ TextureImporter:
       Basic Charakter Spritesheet_8: 1518413977272292722
       Basic Charakter Spritesheet_9: 1804082577669914558
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   spritePackingTag: 
+=======
+  mipmapLimitGroupName: 
+>>>>>>> Stashed changes
 =======
   mipmapLimitGroupName: 
 >>>>>>> Stashed changes

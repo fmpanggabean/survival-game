@@ -239,7 +239,11 @@ TextureImporter:
   streamingMipmapsPriority: 0
   vTOnly: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   ignoreMasterTextureLimit: 0
+=======
+  ignoreMipmapLimit: 0
+>>>>>>> Stashed changes
 =======
   ignoreMipmapLimit: 0
 >>>>>>> Stashed changes
@@ -282,6 +286,10 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  swizzle: 50462976
+>>>>>>> Stashed changes
 =======
   swizzle: 50462976
 >>>>>>> Stashed changes
@@ -1916,7 +1924,11 @@ TextureImporter:
       Grass_8: 2289616372777055746
       Grass_9: 7471297114442723461
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   spritePackingTag: 
+=======
+  mipmapLimitGroupName: 
+>>>>>>> Stashed changes
 =======
   mipmapLimitGroupName: 
 >>>>>>> Stashed changes
