@@ -26,7 +26,8 @@ public class ObjectPool : MonoBehaviour
 
     private void GeneratePooledObject()
     {
-        bulletPrefab = Resources.Load<GameObject>("Prefabs/Bullet");
+        //buat ambil otomatis ke folder (selalu ke folder Resources)
+        //bulletPrefab = Resources.Load<GameObject>("Prefabs/Bullet");
         //GameObject[] enemies = Resources.LoadAll<GameObject>("Prefabs/Enemies");
 
         for (int i = 0; i < count; i++)
@@ -54,7 +55,7 @@ public class ObjectPool : MonoBehaviour
 
             if (obj.activeInHierarchy == false)
             {
-                pooledObject.Activate();                
+                pooledObject.Activate();
                 return (T)pooledObject;
             }
         }
