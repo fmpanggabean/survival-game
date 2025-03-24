@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,6 +9,9 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float finalSpeed;
+
+    private bool canDash = true;
+    private InputAct act;
     private Rigidbody2D rb2d;
     private Vector2 lastDirection;
     List<Buff> buffs = new List<Buff>();
@@ -16,6 +20,34 @@ public class Movement : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         lastDirection = new Vector2();
+
+        act = new InputAct();
+    }
+
+    private void OnEnable()
+    {
+        act.Gameplay.Enable();
+        act.Gameplay.Dash.performed += Dash_performed;
+    }
+
+    private void Dash_performed(CallbackContext obj)
+    {
+        if(canDash)
+        {
+            float currSpd = speed;
+            speed = 15f;
+            Debug.Log("Dashing");
+            StartCoroutine(dashing(currSpd));
+            canDash = false;
+        }
+    }
+
+    IEnumerator dashing(float originSpd)
+    {
+        yield return new WaitForSeconds(0.5f);
+        speed = originSpd;
+        yield return new WaitForSeconds(1f);
+        canDash = true;
     }
 
     private void Start()
