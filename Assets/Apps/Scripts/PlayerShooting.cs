@@ -48,6 +48,9 @@ public class PlayerShooting : MonoBehaviour
             {
                 Vector2 shootDirection = (MousePositionInWorld() - transform.position).normalized;
                 bullet.Shoot(shootDirection, bulletSpeed);
+
+                // **Increase Score When Shooting**
+                FindObjectOfType<ScoreManager>().AddScore(10); // Adds 10 points per shot
             }
         }
     }
