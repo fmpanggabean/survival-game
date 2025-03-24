@@ -7,58 +7,65 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private int count;
-    [SerializeField] private List<GameObject> generatedObjects;
+    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private int bulletCount = 20;
+    [SerializeField] private int enemyCount = 10;
+
+    private List<GameObject> pooledObjects = new List<GameObject>();
 
     void Awake()
     {
-        GeneratePooledObject();
-        DeactivateAllObjects();
+        GeneratePool();
+        DeactivateAll();
     }
 
-    private void DeactivateAllObjects()
+    private void GeneratePool()
     {
-        foreach (GameObject obj in generatedObjects)
+        bulletPrefab = Resources.Load<GameObject>("Prefabs/Bullet");
+        enemyPrefab = Resources.Load<GameObject>("Prefabs/Enemy");
+
+        if (bulletPrefab == null || enemyPrefab == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            GameObject obj = Instantiate(bulletPrefab, transform);
+            obj.SetActive(false);
+            pooledObjects.Add(obj);
+        }
+
+        for (int i = 0; i < enemyCount; i++)
+        {
+            GameObject obj = Instantiate(enemyPrefab, transform);
+            obj.SetActive(false);
+            pooledObjects.Add(obj);
+        }
+    }
+
+    private void DeactivateAll()
+    {
+        foreach (GameObject obj in pooledObjects)
         {
             obj.SetActive(false);
         }
     }
 
-    private void GeneratePooledObject()
+    public T Request<T>() where T : class, IPoolObject
     {
-        bulletPrefab = Resources.Load<GameObject>("Prefabs/Bullet");
-        //GameObject[] enemies = Resources.LoadAll<GameObject>("Prefabs/Enemies");
-
-        for (int i = 0; i < count; i++)
+        foreach (GameObject obj in pooledObjects)
         {
-            generatedObjects.Add(Instantiate(bulletPrefab, transform));
-        }
-
-        //for (int j = 0; j < enemies.Length; j++)
-        //{
-        //    for (int i = 0; i < count; i++)
-        //    {
-        //        generatedObjects.Add(Instantiate(enemies[j], transform));
-        //    }
-        //}        
-    }
-
-
-    public T Request<T>() where T : IPoolObject
-    {
-        foreach (GameObject obj in generatedObjects)
-        {
-            IPoolObject pooledObject = obj.GetComponent<T>();
-
+            T pooledObject = obj.GetComponent<T>();
             if (pooledObject == null) continue;
 
-            if (obj.activeInHierarchy == false)
+            if (!obj.activeInHierarchy)
             {
-                pooledObject.Activate();                
-                return (T)pooledObject;
+                pooledObject.Activate();
+                return pooledObject;
             }
         }
 
-        return default;
+        return null;
     }
 }

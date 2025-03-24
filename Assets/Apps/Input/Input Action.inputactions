@@ -11,15 +11,17 @@
                     "id": "2a157347-31a4-4ccd-87d3-42285b9dc42c",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
-                    "name": "Skill",
+                    "name": "Shoot",
                     "type": "Button",
                     "id": "785f2105-6a62-4230-a99c-0cefb7f6c16c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Pause",
@@ -27,7 +29,17 @@
                     "id": "e396967f-23c5-470f-837a-30f8d9dc0382",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Point",
+                    "type": "Value",
+                    "id": "c34fefea-ac52-42e7-8c1f-384db1d6ddfb",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -99,12 +111,23 @@
                 },
                 {
                     "name": "",
-                    "id": "a67c8b8c-ce8a-411e-87c5-6a5e2f39ded1",
-                    "path": "<Mouse>/rightButton",
+                    "id": "73a3a28d-62d8-48e9-8861-05b44beef7bd",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard & Mouse",
-                    "action": "Skill",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "85dfd9af-dd0c-453d-9761-0df47eda15d3",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -120,7 +143,8 @@
                     "id": "a508d531-7682-470e-b394-fb421f1e869d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
