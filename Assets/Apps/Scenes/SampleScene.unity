@@ -10297,6 +10297,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 16c181f5-2858-4e54-a529-96421d321e8b
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Gameplay/PointGunAt[/Mouse/position]
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1532038634}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Rotate
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Weapon, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090490486106096642, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9090490486106096668, guid: ad82a85ef3134a842ae83c6b7db959b0, type: 3}
       propertyPath: m_RootOrder
       value: 1
