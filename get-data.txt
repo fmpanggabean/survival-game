@@ -1,0 +1,5 @@
+{
+  "username": "binus",
+  "password": "test123",
+  "exp": 100
+}
