@@ -1,3 +1,1 @@
-var data = '{"username":"binus","password":"test123","lastLogin":"5/19/2025 11:11:32 AM","exp":99}';
-
-echo data;
+{"username":"binus","password":"test123","lastLogin":"5/19/2025 11:11:32 AM","exp":99}
