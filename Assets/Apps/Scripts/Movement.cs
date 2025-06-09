@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
     public void SetDirection(Vector2 direction)
     {
         finalSpeed = speed * GetAllBuffModifier();
-        rb2d.velocity = direction * finalSpeed;
+        rb2d.linearVelocity = direction * finalSpeed;
     }
 
     private float GetAllBuffModifier()

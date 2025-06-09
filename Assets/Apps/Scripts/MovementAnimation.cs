@@ -17,7 +17,7 @@ public class MovementAnimation : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("speed", rb2d.velocity.magnitude);
+        animator.SetFloat("speed", rb2d.linearVelocity.magnitude);
         animator.SetFloat("x", movement.GetLastDirection().x);
         animator.SetFloat("y", movement.GetLastDirection().y);
     }
