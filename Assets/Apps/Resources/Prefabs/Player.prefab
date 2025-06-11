@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 2650709401637576097}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,6 +102,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -139,7 +142,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!50 &9090490486106096670
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -150,8 +153,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -172,6 +175,7 @@ CapsuleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9090490486106096641}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -195,7 +199,8 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.0803889}
   m_Size: {x: 0.62777865, y: 0.8294455}
   m_Direction: 0
@@ -239,7 +244,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 2a157347-31a4-4ccd-87d3-42285b9dc42c
-    m_ActionName: Gameplay/SetDirection[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+    m_ActionName: 'Gameplay/SetDirection[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
@@ -255,7 +260,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 785f2105-6a62-4230-a99c-0cefb7f6c16c
-    m_ActionName: Gameplay/Skill[/Mouse/rightButton]
+    m_ActionName: 'Gameplay/Skill[/Mouse/rightButton]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: e396967f-23c5-470f-837a-30f8d9dc0382
@@ -279,7 +284,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 16c181f5-2858-4e54-a529-96421d321e8b
-    m_ActionName: Gameplay/PointGunAt[/Mouse/position]
+    m_ActionName: 'Gameplay/PointGunAt[/Mouse/position]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -313,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!95 &356596326
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -327,6 +332,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -344,3 +350,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c724715c888df054d8a0bcdcb1fe1fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exp: 0
+  level: 1
+  expPerLevel: 100
+  OnLevelUp:
+    m_PersistentCalls:
+      m_Calls: []
